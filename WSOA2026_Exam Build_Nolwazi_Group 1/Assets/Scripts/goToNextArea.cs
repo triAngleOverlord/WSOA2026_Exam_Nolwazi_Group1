@@ -10,11 +10,13 @@ public class goToNextArea : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        Interactable sc = gameObject.AddComponent<Interactable>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         
     }
 
