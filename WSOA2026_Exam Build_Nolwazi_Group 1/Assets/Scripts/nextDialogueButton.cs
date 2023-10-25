@@ -5,6 +5,7 @@ using UnityEngine;
 public class nextDialogueButton : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private DialogueAsset dialogue;
     void Start()
     {
         
