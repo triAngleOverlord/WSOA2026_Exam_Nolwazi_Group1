@@ -1,4 +1,7 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,6 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject playerScreen;
     public GameObject playerCamera;
+
+    public List<string> congoSequence = new List<string>(); 
+
+    public string[] congoFamilyTreeSequence;
     void Awake()
     {
         if (Instance != null && Instance != this)
@@ -22,7 +29,9 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(playerScreen);
         DontDestroyOnLoad(playerCamera);
 
+        congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
     }
+
 
     // Update is called once per frame
     void Update()
@@ -34,5 +43,24 @@ public class GameManager : MonoBehaviour
             renderer.sortingOrder = (int)(renderer.transform.position.y * -100) +10;
         }
         
+    }
+
+    public void checkCongoSequence(List<string> maskSubmitted)
+    {
+        if (congoSequence.Count != 0)
+        {
+            //bool correct = true;
+
+            for (int i = 0; i < congoSequence.Count; i++)
+            {
+                if (congoSequence[i] != maskSubmitted[i])
+                {
+                    Debug.Log(i.ToString() + congoSequence[i] + "," + maskSubmitted[i]);
+                    return;
+                }
+            }
+            
+            Debug.Log("You are correct!");
+        }
     }
 }
