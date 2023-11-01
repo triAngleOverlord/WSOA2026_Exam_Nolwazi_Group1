@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 
 public class MaskPanel : MonoBehaviour, IDropHandler
 {
-    public Canvas playerScreen;
+    public Transform familyTree;
     public GameObject occupying;
 
     public void Awake()
     {
-        playerScreen = GameObject.Find("PlayerScreen").GetComponent<Canvas>(); ;
+        familyTree = GameObject.Find("PlayerScreen").transform;
     }
     public void OnDrop(PointerEventData eventData)
     {
@@ -23,11 +23,11 @@ public class MaskPanel : MonoBehaviour, IDropHandler
         }
         else if(occupying != droppedMask)
         {
-            occupying.transform.SetParent(playerScreen.transform, true);
+            occupying.transform.SetParent(familyTree, true);
             occupying.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             occupying = droppedMask;
         }
-        occupying.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        occupying.transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         occupying.transform.SetParent(transform, true);
         occupying.transform.GetComponent<RectTransform>().localPosition = Vector3.zero;
     }

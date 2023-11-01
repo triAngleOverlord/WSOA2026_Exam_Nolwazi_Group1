@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public Canvas canvas;
+    public Transform familyTree;
 
     public RectTransform maskRect;
     public CanvasGroup maskCanvasGp;
@@ -15,6 +16,7 @@ public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         maskRect = GetComponent<RectTransform>();
         maskCanvasGp = GetComponent<CanvasGroup>();
         canvas = GameObject.Find("PlayerScreen").GetComponent<Canvas>();
+        familyTree = GameObject.Find("FamilyTree").transform;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -22,7 +24,7 @@ public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         {
             transform.parent.transform.GetComponent<MaskPanel>().occupying = null;
         }
-        transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         transform.SetParent(canvas.transform, true);
         //Debug.Log(transform.name + " begun drag");
         maskCanvasGp.blocksRaycasts = false;
@@ -43,6 +45,7 @@ public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         }
         else
         {
+            transform.SetParent(familyTree, true);
             transform.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             maskCanvasGp.blocksRaycasts = true;
         }
