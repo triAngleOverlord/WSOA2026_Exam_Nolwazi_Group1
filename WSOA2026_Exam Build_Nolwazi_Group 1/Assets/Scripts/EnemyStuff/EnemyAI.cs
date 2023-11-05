@@ -99,6 +99,10 @@ public class EnemyAI : MonoBehaviour
         {
             patroling();
         }
+        else if (collision != null && collision.CompareTag("Player"))
+        {
+            //player enters escape scene
+        }
     }
 
     public void pause()
