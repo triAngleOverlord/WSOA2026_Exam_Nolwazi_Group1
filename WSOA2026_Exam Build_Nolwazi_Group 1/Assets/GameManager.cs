@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject playerScreen;
     public GameObject playerCamera;
+    [SerializeField] public GameObject interactCue;
 
     public List<string> congoSequence = new List<string>(); 
 
@@ -28,6 +30,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(player);
         DontDestroyOnLoad(playerScreen);
         DontDestroyOnLoad(playerCamera);
+
+        interactCue = Resources.Load<GameObject>("PressToInteract");
 
         congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
     }
@@ -61,6 +65,25 @@ public class GameManager : MonoBehaviour
             }
             
             Debug.Log("You are correct!");
+        }
+    }
+
+    public void pauseEnemyMovement()
+    {
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in allEnemies)
+        {
+            enemy.transform.GetComponent<EnemyAI>().pause();
+        }
+    }
+    public void resumeEnemyMovement()
+    {
+        GameObject[] allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in allEnemies)
+        {
+            enemy.transform.GetComponent<EnemyAI>().resume();
         }
     }
 }
