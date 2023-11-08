@@ -16,6 +16,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject npcSprite;
     [SerializeField] private TextMeshProUGUI nolwaziDialogue;
     [SerializeField] private TextMeshProUGUI npcDialogue;
+    private TextMeshProUGUI currentDialogue= null;
+    [SerializeField] private TextMeshProUGUI nolwaziName;
+    [SerializeField] private TextMeshProUGUI npcName;
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -24,6 +27,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
     [SerializeField] private GameObject continueBTN;
+
+    private const string SPEAKER_TAG = "speaker";
+    private const string PORTRAIT_TAG = "portrait";
+
 
     private void Awake()
     {
@@ -59,17 +66,12 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            continueStory();
-        }*/
     }
 
     public void enterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
-        currentStory.variablesState["choiceOne"] = false;
+        //currentStory.variablesState["choiceOne"] = false;
         dialogueIsPlaying=true;
         dialoguePanel.SetActive(true);
         GameManager.Instance.pauseEnemyMovement();
@@ -82,11 +84,44 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             npcDialogue.text = currentStory.Continue();
+            handleTags(currentStory.currentTags);
+            Debug.Log(currentDialogue.name);
+            
+            
+            
             displayChoices();
+            
         }
         else
         {
             exitDialogueMode();
+        }
+    }
+
+    private void handleTags(List<string> currentTags)
+    {
+        foreach (string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            Debug.Log(splitTag.Length);
+            if(splitTag.Length != 2)
+            {
+                Debug.LogError("Tag is incorrect: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+            switch(tagKey)
+            {
+                case SPEAKER_TAG: Debug.Log("speaker= " + tagValue);
+                    if(tagValue == "Nolwazi")
+                        currentDialogue = nolwaziDialogue;
+                    else
+                        currentDialogue = npcDialogue;
+                    break;
+                case PORTRAIT_TAG:Debug.Log("portrait= " + tagValue); 
+                    break;
+            }
+            
         }
     }
 
@@ -116,7 +151,7 @@ public class DialogueManager : MonoBehaviour
             {
                 choices[i].gameObject.SetActive(true);
                 choicesText[i].text = choice.text;
-                Debug.Log(choice.text);
+                //Debug.Log(choice.text);
                 i++;
             }
 
