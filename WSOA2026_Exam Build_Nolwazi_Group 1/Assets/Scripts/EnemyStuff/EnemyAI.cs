@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
-{
-    public Vector3 eTarget;
-    public GameObject sensor;
+{   
+    private GameObject sensor;
+    private NavMeshAgent agent;
     public float enemySpeed;
-
     public bool playerSpotted;
+
+    public Transform[] patrolPoints;
+    public int targetPoint;
+    public Transform patrolTarget;
+    public Transform eTarget;
     
+
     // Start is called before the first frame update
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = enemySpeed;
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        sensor = transform.GetChild(0).gameObject;
+
+        targetPoint = 0;
+        eTarget = patrolPoints[targetPoint];
+
         StartCoroutine(hasEnemyMoved(transform.position));
     }
 
@@ -20,25 +35,20 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         
-        
     }
 
     private void FixedUpdate()
     {
-        if (playerSpotted == true)
-        {
-            followPlayer(eTarget);
-        }
+        agent.SetDestination(eTarget.position);
     }
-
-    public void followPlayer(Vector3 target)
+    public void patroling()
     {
-        Vector2 direction = target - transform.position;
-        direction.Normalize();
-        transform.position = Vector2.MoveTowards(this.transform.position, target, enemySpeed * Time.deltaTime);
+        targetPoint++;
+        if (targetPoint >= patrolPoints.Length)
+            targetPoint = 0;
 
-        if (target == transform.position)
-            playerSpotted = false;
+        eTarget = patrolPoints[targetPoint];
+        patrolTarget.position = eTarget.position;
     }
 
     public void sensorMovement(float xPOS, float yPOS)
@@ -81,5 +91,27 @@ public class EnemyAI : MonoBehaviour
         }
         StartCoroutine(hasEnemyMoved(transform.position));
 
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null && collision.transform == patrolTarget)
+        {
+            patroling();
+        }
+        else if (collision != null && collision.CompareTag("Player"))
+        {
+            //player enters escape scene
+        }
+    }
+
+    public void pause()
+    {
+        agent.speed = 0f;
+    }
+
+    public void resume()
+    {
+        agent.speed = enemySpeed;
     }
 }
