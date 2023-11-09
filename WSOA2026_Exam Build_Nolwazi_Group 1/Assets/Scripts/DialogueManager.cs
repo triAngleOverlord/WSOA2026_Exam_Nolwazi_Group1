@@ -83,9 +83,10 @@ public class DialogueManager : MonoBehaviour
         
         if (currentStory.canContinue)
         {
-            npcDialogue.text = currentStory.Continue();
-            handleTags(currentStory.currentTags);
-            Debug.Log(currentDialogue.name);
+            //currentStory.Continue();
+            string placeHolder = currentStory.Continue();
+            handleTags(currentStory.currentTags, placeHolder);
+            //Debug.Log(currentDialogue.name);
             
             
             
@@ -98,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void handleTags(List<string> currentTags)
+    private void handleTags(List<string> currentTags, string tempText)
     {
         foreach (string tag in currentTags)
         {
@@ -113,10 +114,10 @@ public class DialogueManager : MonoBehaviour
             switch(tagKey)
             {
                 case SPEAKER_TAG: Debug.Log("speaker= " + tagValue);
-                    if(tagValue == "Nolwazi")
-                        currentDialogue = nolwaziDialogue;
+                    if (tagValue == "Nolwazi")
+                        nolwaziDialogue.text = tempText;
                     else
-                        currentDialogue = npcDialogue;
+                        npcDialogue.text = tempText;
                     break;
                 case PORTRAIT_TAG:Debug.Log("portrait= " + tagValue); 
                     break;
