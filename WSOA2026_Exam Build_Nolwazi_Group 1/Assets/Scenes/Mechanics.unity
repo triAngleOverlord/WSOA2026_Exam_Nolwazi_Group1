@@ -2808,6 +2808,7 @@ GameObject:
   - component: {fileID: 598753341}
   - component: {fileID: 598753343}
   - component: {fileID: 598753342}
+  - component: {fileID: 598753344}
   m_Layer: 5
   m_Name: NolwaziImage
   m_TagString: Untagged
@@ -2874,6 +2875,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 598753340}
   m_CullTransparentMesh: 1
+--- !u!95 &598753344
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598753340}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b308323b6726d8b4da9b86dc6d25aaa9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &651061645
 GameObject:
   m_ObjectHideFlags: 0
@@ -3901,7 +3922,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.619995, y: 44.99996}
+  m_AnchoredPosition: {x: -8.619995, y: 191.99997}
   m_SizeDelta: {x: 1010, y: 64.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1145953504
@@ -4032,8 +4053,10 @@ MonoBehaviour:
   npcSprite: {fileID: 1382756440}
   nolwaziDialogue: {fileID: 156586447}
   npcDialogue: {fileID: 132216234}
-  nolwaziName: {fileID: 1590214724}
   npcName: {fileID: 1179716145}
+  nolwaziSpriteAnim: {fileID: 598753344}
+  npcSpriteAnim: {fileID: 1382756444}
+  typingSpeed: 0.07
   choices:
   - {fileID: 1849024597}
   - {fileID: 1145953502}
@@ -4739,7 +4762,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.619995, y: -27.000038}
+  m_AnchoredPosition: {x: -8.619995, y: 119.99998}
   m_SizeDelta: {x: 1010, y: 64.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250719711
@@ -5712,6 +5735,7 @@ GameObject:
   - component: {fileID: 1382756441}
   - component: {fileID: 1382756443}
   - component: {fileID: 1382756442}
+  - component: {fileID: 1382756444}
   m_Layer: 5
   m_Name: NPCImage
   m_TagString: Untagged
@@ -5778,6 +5802,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382756440}
   m_CullTransparentMesh: 1
+--- !u!95 &1382756444
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382756440}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 331a903938249ab44a1200db723e313b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1382840563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6368,7 +6412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.419983, y: -17.130005}
+  m_AnchoredPosition: {x: 3.4199219, y: -17.130005}
   m_SizeDelta: {x: -1245.36, y: -305.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1494444152
@@ -7428,7 +7472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.619995, y: 119}
+  m_AnchoredPosition: {x: -8.619995, y: 266}
   m_SizeDelta: {x: 1010, y: 64.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849024599

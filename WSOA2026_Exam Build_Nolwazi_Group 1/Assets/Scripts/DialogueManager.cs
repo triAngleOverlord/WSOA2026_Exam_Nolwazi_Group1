@@ -16,12 +16,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject npcSprite;
     [SerializeField] private TextMeshProUGUI nolwaziDialogue;
     [SerializeField] private TextMeshProUGUI npcDialogue;
-    private TextMeshProUGUI currentDialogue= null;
-    [SerializeField] private TextMeshProUGUI nolwaziName;
+    //[SerializeField] private TextMeshProUGUI nolwaziName;
     [SerializeField] private TextMeshProUGUI npcName;
+    [SerializeField] private Animator nolwaziSpriteAnim;
+    [SerializeField] private Animator npcSpriteAnim;
+    [SerializeField] private float typingSpeed= 0.004f;
 
     private Story currentStory;
     private bool dialogueIsPlaying;
+    private Coroutine displayLineCoroutine;
+    private bool canContinueToNextLine= true;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -80,23 +84,29 @@ public class DialogueManager : MonoBehaviour
 
     public void continueStory()
     {
-        
-        if (currentStory.canContinue)
+        if (canContinueToNextLine==true) //&& currentStory.currentChoices.Count==0)
         {
-            //currentStory.Continue();
-            string placeHolder = currentStory.Continue();
-            handleTags(currentStory.currentTags, placeHolder);
-            //Debug.Log(currentDialogue.name);
-            
-            
-            
-            displayChoices();
-            
+            if (currentStory.canContinue)
+            {
+                //currentStory.Continue();
+                nolwaziDialogue.transform.parent.gameObject.SetActive(false);
+                npcDialogue.transform.parent.gameObject.SetActive(true);
+                string placeHolder = currentStory.Continue();
+                handleTags(currentStory.currentTags, placeHolder);
+                //Debug.Log(currentDialogue.name);
+                for (int i = 0; i < choices.Length; i++) 
+                {
+                    choices[i].gameObject.SetActive(false);
+                }
+                continueBTN.SetActive(false);
+                //displayChoices();
+            }
+            else
+            {
+                exitDialogueMode();
+            }
         }
-        else
-        {
-            exitDialogueMode();
-        }
+            
     }
 
     private void handleTags(List<string> currentTags, string tempText)
@@ -104,22 +114,51 @@ public class DialogueManager : MonoBehaviour
         foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
-            Debug.Log(splitTag.Length);
+            //Debug.Log(splitTag.Length);
             if(splitTag.Length != 2)
             {
                 Debug.LogError("Tag is incorrect: " + tag);
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
+            
             switch(tagKey)
             {
-                case SPEAKER_TAG: Debug.Log("speaker= " + tagValue);
+                case SPEAKER_TAG: //Debug.Log("speaker= " + tagValue);
                     if (tagValue == "Nolwazi")
-                        nolwaziDialogue.text = tempText;
+                    {
+                        nolwaziDialogue.transform.parent.gameObject.SetActive(true);
+                        //nolwaziDialogue.text = tempText;
+                        if (displayLineCoroutine != null)
+                        {
+                            StopCoroutine(displayLineCoroutine);
+                        }
+                        displayLineCoroutine = StartCoroutine(displayLine(nolwaziDialogue, tempText));
+                    }
                     else
-                        npcDialogue.text = tempText;
+                    {
+                        npcDialogue.transform.parent.gameObject.SetActive(true);
+                        //npcDialogue.text = tempText;
+                        if (displayLineCoroutine != null)
+                        {
+                            StopCoroutine(displayLineCoroutine);
+                        }
+                        displayLineCoroutine = StartCoroutine(displayLine(npcDialogue, tempText));
+                        npcName.text = tagValue;
+                    }
                     break;
-                case PORTRAIT_TAG:Debug.Log("portrait= " + tagValue); 
+                case PORTRAIT_TAG://Debug.Log("portrait= " + tagValue); 
+                    string tempTag= tagValue;
+                    tempTag= tempTag.Substring(0, 7);
+                    Debug.Log(tempTag);
+                    if(tempTag == "nolwazi")
+                    {
+                        nolwaziSpriteAnim.Play(tagValue);
+                    }
+                    else
+                    {
+                        npcSpriteAnim.Play(tagValue);
+                    }
                     break;
             }
             
@@ -141,6 +180,8 @@ public class DialogueManager : MonoBehaviour
 
         if (currentChoices.Count != 0)
         {
+            nolwaziDialogue.transform.parent.gameObject.SetActive(false);
+            //npcDialogue.transform.parent.gameObject.SetActive(true);
             continueBTN.SetActive(false);
             if (currentChoices.Count > choices.Length)//makes sure there is enough UI support
             {
@@ -174,6 +215,19 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    private IEnumerator displayLine(TextMeshProUGUI dialogueCurry, string line)
+    {
+        dialogueCurry.text = "";
+        canContinueToNextLine = false;
+        foreach (char letter in line)
+        {
+            dialogueCurry.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+        canContinueToNextLine = true;
+        Debug.Log(canContinueToNextLine);
+        displayChoices();
+    }
     private IEnumerator SelectFirstChoice()
     {
         //event system handles disributing the action of the buttons after waiting 1 frame
