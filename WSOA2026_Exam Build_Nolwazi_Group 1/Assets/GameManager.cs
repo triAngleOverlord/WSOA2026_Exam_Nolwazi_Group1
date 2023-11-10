@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject interactCue;
     [SerializeField] public GameObject congoPuzzle;
     [SerializeField] public GameObject nigeriaPuzzle;
-    [SerializeField] public GameObject collectItemPanel;
+    [SerializeField] public GameObject collectedPanel;
 
     public List<string> congoSequence = new List<string>(); 
 
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         interactCue = Resources.Load<GameObject>("PressToInteract");
         congoPuzzle.gameObject.SetActive(false);
         nigeriaPuzzle.gameObject.SetActive(false);
+        collectedPanel.gameObject.SetActive(false);
 
         congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
     }

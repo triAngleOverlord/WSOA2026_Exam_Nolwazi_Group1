@@ -5,6 +5,7 @@ using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private float typingSpeed;
+    [SerializeField] private GameObject givingImage;
     [Header("Left")]
     [SerializeField] private GameObject oneSprite;
     [SerializeField] private TextMeshProUGUI oneDialogue;
@@ -37,6 +39,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "portrait";
+    private const string GIVE_TAG = "give";
 
 
     private void Awake()
@@ -94,6 +97,7 @@ public class DialogueManager : MonoBehaviour
                 //currentStory.Continue();
                 oneDialogue.transform.parent.gameObject.SetActive(false);
                 twoDialogue.transform.parent.gameObject.SetActive(true);
+                givingImage.gameObject.SetActive(false);
                 string placeHolder = currentStory.Continue();
                 handleTags(currentStory.currentTags, placeHolder);
                 //Debug.Log(currentDialogue.name);
@@ -161,6 +165,13 @@ public class DialogueManager : MonoBehaviour
                     {
                         twoAnimator.Play(tagValue);
                     }
+                    break;
+                case GIVE_TAG:
+                    givingImage.gameObject.SetActive(true);
+                    givingImage.transform.GetComponent<Image>().sprite= Resources.Load<Sprite>("GivenObjects/" + tagValue);
+                    GameObject player = GameObject.FindWithTag("Player");
+                    AddToJournal pCopy = player.AddComponent<AddToJournal>();
+                    pCopy.materialName = tagValue + "_J";
                     break;
             }
             

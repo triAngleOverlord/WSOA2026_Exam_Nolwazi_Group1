@@ -9,7 +9,7 @@ public class NPCInteraction : MonoBehaviour
     private bool yesI;
     private void Start()
     {
-        Debug.Log(name);
+        //Debug.Log(name);
         EtoInteract = GameManager.Instance.interactCue.gameObject;
         WorldScreen = GameObject.Find("WorldScreen").transform;
     }
