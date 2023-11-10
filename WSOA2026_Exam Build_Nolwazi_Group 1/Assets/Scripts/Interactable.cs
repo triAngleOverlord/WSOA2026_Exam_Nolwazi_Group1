@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
@@ -10,17 +11,19 @@ public class Interactable : MonoBehaviour
     private Transform WorldScreen;
     private GameObject instanText;
     private PlayerScript player;
-
-    [SerializeField] public TextAsset inkJSON;
+    
+    [SerializeField] private TextAsset inkJSON;
+    //[SerializeField] private GameObject panelToOpen;
 
     public interactType interactionType;
     public enum interactType
     {
-        collectable, NPC, puzzle
+        collectable, NPC, congoPuzzle, nigeriaPuzzle
     }
 
     void Start()
     {
+        Debug.Log(interactionType + " for "+name);
         WorldScreen = GameObject.Find("WorldScreen").transform;
         player = GameObject.Find("Nolwazi").transform.GetComponent<PlayerScript>();
 
@@ -30,11 +33,22 @@ public class Interactable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.interact == true && Input.GetKey(KeyCode.E))
+        if (PlayerScript.interact == true && Input.GetKey(KeyCode.E))
         {
-            DialogueManager.instance.enterDialogueMode(inkJSON);
             Debug.Log("I interacted with this");
-            player.interact = false;
+            
+            switch(this.interactionType)
+            {
+                case interactType.collectable:collectObjectInteraction();
+                    break;
+                case interactType.NPC: NPCinteraction();
+                    break;
+                case interactType.congoPuzzle: congoPuzzleInteraction();
+                    break;
+                case interactType.nigeriaPuzzle: nigeriaPuzzleInteraction();
+                    break;
+            }
+            PlayerScript.interact = false;
             PlayerScript.canMove = false;
         }
     }
@@ -45,28 +59,39 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Found");
             instanText= Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
-            player.interact = true;
+            PlayerScript.interact = true;
 
-            
         }
     }
 
     public void OnTriggerExit2D(Collider2D collision)
     {
         Destroy(instanText);
-        player.interact = false;
+        PlayerScript.interact = false;
     }
 
     public void NPCinteraction()
     {
-
+        Debug.Log("Player made a npcInteraction");
+        DialogueManager.instance.enterDialogueMode(inkJSON);
     }
     public void collectObjectInteraction()
     {
-
+        //Debug.Log("Player found something");
+        GameObject player = GameObject.FindWithTag("Player");
+        //Debug.Log("Player picked up " + transform.name + "_J");
+        AddToJournal pCopy = player.AddComponent<AddToJournal>();
+        pCopy.materialName = transform.name + "_J";
     }
-    public void puzzleInteraction()
-    {
 
+    public void congoPuzzleInteraction()
+    {
+        Debug.Log("Player opened the congo puzzle");
+        GameManager.Instance.congoPuzzle.SetActive(true);
+    }
+    public void nigeriaPuzzleInteraction()
+    {
+        Debug.Log("Player opened nigeria puzzle");
+        GameManager.Instance.nigeriaPuzzle.SetActive(true);
     }
 }

@@ -12,15 +12,18 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
-    [SerializeField] private GameObject nolwaziSprite;
-    [SerializeField] private GameObject npcSprite;
-    [SerializeField] private TextMeshProUGUI nolwaziDialogue;
-    [SerializeField] private TextMeshProUGUI npcDialogue;
-    //[SerializeField] private TextMeshProUGUI nolwaziName;
-    [SerializeField] private TextMeshProUGUI npcName;
-    [SerializeField] private Animator nolwaziSpriteAnim;
-    [SerializeField] private Animator npcSpriteAnim;
-    [SerializeField] private float typingSpeed= 0.004f;
+    [SerializeField] private float typingSpeed;
+    [Header("Left")]
+    [SerializeField] private GameObject oneSprite;
+    [SerializeField] private TextMeshProUGUI oneDialogue;
+    [SerializeField] private TextMeshProUGUI oneName;
+    [SerializeField] private Animator oneAnimator;
+    [Header("Right")]
+    [SerializeField] private GameObject twoSprite;
+    [SerializeField] private TextMeshProUGUI twoDialogue;
+    [SerializeField] private TextMeshProUGUI twoName;
+    [SerializeField] private Animator twoAnimator;
+    
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -89,8 +92,8 @@ public class DialogueManager : MonoBehaviour
             if (currentStory.canContinue)
             {
                 //currentStory.Continue();
-                nolwaziDialogue.transform.parent.gameObject.SetActive(false);
-                npcDialogue.transform.parent.gameObject.SetActive(true);
+                oneDialogue.transform.parent.gameObject.SetActive(false);
+                twoDialogue.transform.parent.gameObject.SetActive(true);
                 string placeHolder = currentStory.Continue();
                 handleTags(currentStory.currentTags, placeHolder);
                 //Debug.Log(currentDialogue.name);
@@ -121,43 +124,42 @@ public class DialogueManager : MonoBehaviour
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
-            
+            string tempValue = tagValue.Substring(0, 1);
+            //Debug.Log(tempValue);
             switch(tagKey)
             {
                 case SPEAKER_TAG: //Debug.Log("speaker= " + tagValue);
-                    if (tagValue == "Nolwazi")
+                    if (tempValue == "1")
                     {
-                        nolwaziDialogue.transform.parent.gameObject.SetActive(true);
+                        oneDialogue.transform.parent.gameObject.SetActive(true);
                         //nolwaziDialogue.text = tempText;
                         if (displayLineCoroutine != null)
                         {
                             StopCoroutine(displayLineCoroutine);
                         }
-                        displayLineCoroutine = StartCoroutine(displayLine(nolwaziDialogue, tempText));
+                        displayLineCoroutine = StartCoroutine(displayLine(oneDialogue, tempText));
+                        oneName.text = tagValue.Substring(1,tagValue.Length-1);
                     }
                     else
                     {
-                        npcDialogue.transform.parent.gameObject.SetActive(true);
+                        twoDialogue.transform.parent.gameObject.SetActive(true);
                         //npcDialogue.text = tempText;
                         if (displayLineCoroutine != null)
                         {
                             StopCoroutine(displayLineCoroutine);
                         }
-                        displayLineCoroutine = StartCoroutine(displayLine(npcDialogue, tempText));
-                        npcName.text = tagValue;
+                        displayLineCoroutine = StartCoroutine(displayLine(twoDialogue, tempText));
+                        twoName.text = tagValue.Substring(1, tagValue.Length-1); 
                     }
                     break;
-                case PORTRAIT_TAG://Debug.Log("portrait= " + tagValue); 
-                    string tempTag= tagValue;
-                    tempTag= tempTag.Substring(0, 7);
-                    Debug.Log(tempTag);
-                    if(tempTag == "nolwazi")
+                case PORTRAIT_TAG:
+                    if(tempValue == "1")
                     {
-                        nolwaziSpriteAnim.Play(tagValue);
+                        oneAnimator.Play(tagValue);
                     }
                     else
                     {
-                        npcSpriteAnim.Play(tagValue);
+                        twoAnimator.Play(tagValue);
                     }
                     break;
             }
@@ -170,7 +172,7 @@ public class DialogueManager : MonoBehaviour
         GameManager.Instance.resumeEnemyMovement();
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-        npcDialogue.text = "";
+        twoDialogue.text = "";
         PlayerScript.canMove = true;
     }
 
@@ -180,7 +182,7 @@ public class DialogueManager : MonoBehaviour
 
         if (currentChoices.Count != 0)
         {
-            nolwaziDialogue.transform.parent.gameObject.SetActive(false);
+            oneDialogue.transform.parent.gameObject.SetActive(false);
             //npcDialogue.transform.parent.gameObject.SetActive(true);
             continueBTN.SetActive(false);
             if (currentChoices.Count > choices.Length)//makes sure there is enough UI support

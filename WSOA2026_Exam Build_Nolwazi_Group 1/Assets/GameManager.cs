@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject playerScreen;
     public GameObject playerCamera;
     [SerializeField] public GameObject interactCue;
+    [SerializeField] public GameObject congoPuzzle;
+    [SerializeField] public GameObject nigeriaPuzzle;
+    [SerializeField] public GameObject collectItemPanel;
 
     public List<string> congoSequence = new List<string>(); 
 
@@ -32,6 +35,8 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(playerCamera);
 
         interactCue = Resources.Load<GameObject>("PressToInteract");
+        congoPuzzle.gameObject.SetActive(false);
+        nigeriaPuzzle.gameObject.SetActive(false);
 
         congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
     }
@@ -85,5 +90,12 @@ public class GameManager : MonoBehaviour
         {
             enemy.transform.GetComponent<EnemyAI>().resume();
         }
+    }
+
+    public void escapePanel(GameObject thing)
+    {
+        thing.SetActive(false);
+        PlayerScript.canMove = true;
+        PlayerScript.interact = true;
     }
 }
