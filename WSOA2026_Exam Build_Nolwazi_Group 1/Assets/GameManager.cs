@@ -1,8 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -96,6 +93,6 @@ public class GameManager : MonoBehaviour
     {
         thing.SetActive(false);
         PlayerScript.canMove = true;
-        ;// PlayerScript.player.interact = true;
+        // PlayerScript.player.interact = true;
     }
 }

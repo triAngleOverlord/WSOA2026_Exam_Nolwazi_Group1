@@ -8,7 +8,6 @@ public class ObjectInteraction : MonoBehaviour
     private bool objectI;
     private void Start()
     {
-        //Debug.Log(interactionType + " for "+transform.parent.name);
         WorldScreen = GameObject.Find("WorldScreen").transform;
         EtoInteract = GameManager.Instance.interactCue.gameObject;
     }
@@ -18,7 +17,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (objectI == true && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("I interacted with " + transform.parent.name);
+            //Debug.Log("I interacted with " + transform.parent.name);
             //Debug.Log("Player found something");
             GameObject player = GameObject.FindWithTag("Player");
             //Debug.Log("Player picked up " + transform.name + "_J");
@@ -26,6 +25,7 @@ public class ObjectInteraction : MonoBehaviour
             pCopy.materialName = transform.name + "_J";
             objectI = false;
             PlayerScript.canMove = false;
+            Destroy(instanText);
         }
     }
 
@@ -33,7 +33,7 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other != null && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Found");
+            //Debug.Log("Found");
             instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
             objectI = true;
         }

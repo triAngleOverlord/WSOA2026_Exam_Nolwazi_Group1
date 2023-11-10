@@ -1959,6 +1959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15051de40eac0ca4a9199e02e5778129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  worldpuzzlePanel: {fileID: 0}
 --- !u!1 &401573492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3672,7 +3674,7 @@ GameObject:
   - component: {fileID: 805717481}
   - component: {fileID: 805717482}
   m_Layer: 6
-  m_Name: FamilyTree
+  m_Name: CongoPuzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5536,7 +5538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1267314670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7020,6 +7022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15051de40eac0ca4a9199e02e5778129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  worldpuzzlePanel: {fileID: 0}
 --- !u!1 &1466230917
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,7 +7043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1466230918
 Transform:
   m_ObjectHideFlags: 0

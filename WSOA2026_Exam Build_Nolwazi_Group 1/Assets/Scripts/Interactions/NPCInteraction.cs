@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class NPCInteraction : MonoBehaviour
 {
-    // Start is called before the first frame update
     private GameObject EtoInteract;
     private Transform WorldScreen;
     private GameObject instanText;
@@ -13,7 +12,6 @@ public class NPCInteraction : MonoBehaviour
         Debug.Log(name);
         EtoInteract = GameManager.Instance.interactCue.gameObject;
         WorldScreen = GameObject.Find("WorldScreen").transform;
-        
     }
     // Update is called once per frame
     private void Update()
@@ -24,6 +22,7 @@ public class NPCInteraction : MonoBehaviour
             NPCinteraction();
             yesI = false;
             PlayerScript.canMove = false;
+            Destroy(instanText);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)

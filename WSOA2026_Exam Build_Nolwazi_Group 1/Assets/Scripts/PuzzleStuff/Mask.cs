@@ -16,7 +16,7 @@ public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         maskRect = GetComponent<RectTransform>();
         maskCanvasGp = GetComponent<CanvasGroup>();
         canvas = GameObject.Find("PlayerScreen").GetComponent<Canvas>();
-        familyTree = GameObject.Find("FamilyTree").transform;
+        familyTree = GameObject.Find("CongoPuzzle").transform;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
