@@ -96,6 +96,6 @@ public class GameManager : MonoBehaviour
     {
         thing.SetActive(false);
         PlayerScript.canMove = true;
-        PlayerScript.interact = true;
+        ;// PlayerScript.player.interact = true;
     }
 }

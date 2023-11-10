@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour
 
     public GameObject playerCamera;
     public GameObject pCameraPOS;
-    public static bool interact;
+    //public bool interact;
     public bool openJournal;
     public GameObject journal;
 

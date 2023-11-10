@@ -7,9 +7,10 @@ public class NPCInteraction : MonoBehaviour
     private Transform WorldScreen;
     private GameObject instanText;
     [SerializeField] private TextAsset inkJSON;
+    private bool yesI;
     private void Start()
     {
-        Debug.Log(transform.parent.name);
+        Debug.Log(name);
         EtoInteract = GameManager.Instance.interactCue.gameObject;
         WorldScreen = GameObject.Find("WorldScreen").transform;
         
@@ -17,11 +18,11 @@ public class NPCInteraction : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (PlayerScript.interact == true && Input.GetKey(KeyCode.E))
+        if (yesI == true && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("I interacted with " + transform.parent.name);
+            Debug.Log("I interacted with " + name);
             NPCinteraction();
-            PlayerScript.interact = false;
+            yesI = false;
             PlayerScript.canMove = false;
         }
     }
@@ -29,15 +30,15 @@ public class NPCInteraction : MonoBehaviour
     {
         if (other != null && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Found " + transform.parent.name);
+            Debug.Log("Found " + name);
             instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
-            PlayerScript.interact = true;
+            yesI = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         Destroy(instanText);
-        PlayerScript.interact = false;
+        yesI = false;
     }
     private void NPCinteraction()
     {

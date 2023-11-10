@@ -5,6 +5,7 @@ public class ObjectInteraction : MonoBehaviour
     private GameObject EtoInteract;
     private Transform WorldScreen;
     private GameObject instanText;
+    private bool objectI;
     private void Start()
     {
         //Debug.Log(interactionType + " for "+transform.parent.name);
@@ -15,7 +16,7 @@ public class ObjectInteraction : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (PlayerScript.interact == true && Input.GetKey(KeyCode.E))
+        if (objectI == true && Input.GetKey(KeyCode.E))
         {
             Debug.Log("I interacted with " + transform.parent.name);
             //Debug.Log("Player found something");
@@ -23,7 +24,7 @@ public class ObjectInteraction : MonoBehaviour
             //Debug.Log("Player picked up " + transform.name + "_J");
             AddToJournal pCopy = player.AddComponent<AddToJournal>();
             pCopy.materialName = transform.name + "_J";
-            PlayerScript.interact = false;
+            objectI = false;
             PlayerScript.canMove = false;
         }
     }
@@ -34,13 +35,13 @@ public class ObjectInteraction : MonoBehaviour
         {
             Debug.Log("Found");
             instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
-            PlayerScript.interact = true;
+            objectI = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         Destroy(instanText);
-        PlayerScript.interact = false;
+        objectI = false;
     }
 
 }
