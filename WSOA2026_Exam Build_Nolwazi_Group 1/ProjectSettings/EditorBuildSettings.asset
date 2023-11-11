@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 36340208c6be5674a8619d44e5c3bd92
   - enabled: 1
-    path: Assets/Scenes/NarrativeCutScene.unity
+    path: Assets/Scenes/Mechanics.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Congo.unity
     guid: 2b2ba0c0f9fef4e428859b30bb5d9c82
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: cc991846b44fbbf40b043e7cad1ee89d
   m_configObjects: {}
