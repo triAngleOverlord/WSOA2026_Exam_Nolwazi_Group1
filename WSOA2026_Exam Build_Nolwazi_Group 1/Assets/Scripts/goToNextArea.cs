@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class goToNextArea : MonoBehaviour
 {
     public string sceneName;
-    public GameObject player;
+    //public GameObject player;
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        //player = GameObject.FindWithTag("Player");
         //Interactable sc = gameObject.AddComponent<Interactable>();
     }
 
@@ -22,7 +22,7 @@ public class goToNextArea : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        player.transform.position = new Vector3(-11, 0, 0);
+        //player.transform.position = new Vector3(-11, 0, 0);
         SceneManager.LoadScene(sceneName);
     }
 }

@@ -11,7 +11,7 @@ public class RestartLevelTrigger : MonoBehaviour
     // This method is called when a GameObject enters the trigger
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             RestartScene();
             Debug.Log("Player entered the trigger.");

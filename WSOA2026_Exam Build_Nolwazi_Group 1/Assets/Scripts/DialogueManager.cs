@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private float typingSpeed;
     [SerializeField] private GameObject givingImage;
+    [SerializeField] private TextMeshProUGUI narrativeText;
     [Header("Left")]
     [SerializeField] private GameObject oneSprite;
     [SerializeField] private TextMeshProUGUI oneDialogue;
@@ -96,10 +97,9 @@ public class DialogueManager : MonoBehaviour
             {
                 //currentStory.Continue();
                 oneDialogue.transform.parent.gameObject.SetActive(false);
-                twoDialogue.transform.parent.gameObject.SetActive(true);
+                twoDialogue.transform.parent.gameObject.SetActive(false);
                 givingImage.gameObject.SetActive(false);
-                string placeHolder = currentStory.Continue();
-                handleTags(currentStory.currentTags, placeHolder);
+                
                 //Debug.Log(currentDialogue.name);
                 for (int i = 0; i < choices.Length; i++) 
                 {
@@ -107,6 +107,23 @@ public class DialogueManager : MonoBehaviour
                 }
                 continueBTN.SetActive(false);
                 //displayChoices();
+                string placeHolder = currentStory.Continue();
+                //Debug.Log(currentStory.currentTags.Count);
+                if(currentStory.currentTags.Count !=0)
+                    handleTags(currentStory.currentTags, placeHolder);
+                else
+                {
+                    oneSprite.gameObject.SetActive(false);
+                    twoSprite.gameObject.SetActive(false);
+                    narrativeText.transform.parent.gameObject.SetActive(true);
+                    if (displayLineCoroutine != null)
+                    {
+                        StopCoroutine(displayLineCoroutine);
+                    }
+                    displayLineCoroutine = StartCoroutine(displayLine(narrativeText, placeHolder));
+                    displayChoices();
+                }
+
             }
             else
             {
@@ -121,7 +138,7 @@ public class DialogueManager : MonoBehaviour
         foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
-            //Debug.Log(splitTag.Length);
+            Debug.Log(tag);
             if(splitTag.Length != 2)
             {
                 Debug.LogError("Tag is incorrect: " + tag);
@@ -157,7 +174,9 @@ public class DialogueManager : MonoBehaviour
                     }
                     break;
                 case PORTRAIT_TAG:
-                    if(tempValue == "1")
+                    oneSprite.gameObject.SetActive(true);
+                    twoSprite.gameObject.SetActive(true);
+                    if (tempValue == "1")
                     {
                         oneAnimator.Play(tagValue);
                     }

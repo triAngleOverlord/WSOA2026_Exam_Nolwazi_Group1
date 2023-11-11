@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Pages
   - PlayerBody
+  - Enemy
+  - MaskSlot
+  - PatrolTarget
   layers:
   - Default
   - TransparentFX
@@ -14,7 +17,7 @@ TagManager:
   - Water
   - UI
   - MiniMap
-  - 
+  - PlayerBody
   - 
   - 
   - 
