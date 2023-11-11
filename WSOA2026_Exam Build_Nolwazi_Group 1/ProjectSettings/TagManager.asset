@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Pages
   - PlayerBody
-  - MaskSlot
-  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - FamilyTree
+  - MiniMap
   - 
   - 
   - 
@@ -56,4 +54,7 @@ TagManager:
     locked: 0
   - name: PlayerScreen
     uniqueID: 549507739
+    locked: 0
+  - name: Mask
+    uniqueID: 809417991
     locked: 0
