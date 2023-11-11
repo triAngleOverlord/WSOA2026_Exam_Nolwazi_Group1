@@ -22,7 +22,12 @@ public class goToNextArea : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        //player.transform.position = new Vector3(-11, 0, 0);
-        SceneManager.LoadScene(sceneName);
+        if(collision != null && collision.CompareTag("Player"))
+        {
+            //player.transform.position = new Vector3(-11, 0, 0);
+            SceneManager.LoadScene(sceneName);
+
+        }
+        
     }
 }
