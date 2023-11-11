@@ -4,13 +4,13 @@ VAR choiceOne = false//variable that unity code can influence
 
 ===introElder===
 
-The elder asks where Nolwazi is going?#speaker:Elder #portrait:confused
+The elder asks where Nolwazi is going?#speaker:2Elder #portrait:confusedElder
     + [{choiceOne:  Hello| ? }]
         {choiceOne:The elder slaps his thigh and laughs! ->main | The elder doesn't seem to understand you. ->introElder  }
-    * You now understand the language#speaker:Nolwazi #potrait:answer
+    * You now understand the language#speaker:1Nolwazi #portrait:nolwaziAnswer
         ~choiceOne = true
         ->introElder
 ->DONE
 === main ===
-Ah yes Nolwazi, you can now understand me!#speaker:Elder #portrait:happy
+Ah yes Nolwazi, you can now understand me!#speaker:2Elder #portrait:happyElder
 ->DONE
