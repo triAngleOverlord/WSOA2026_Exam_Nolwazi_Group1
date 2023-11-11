@@ -22,5 +22,6 @@ public class RestartLevelTrigger : MonoBehaviour
     private void RestartScene()
     {
         SceneManager.LoadScene(3);
+
     }
 }

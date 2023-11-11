@@ -13,7 +13,19 @@ public class PlayerScript : MonoBehaviour
 
     public float speed;
     public static bool canMove;
-    
+
+    public void Awake()
+    {
+        if (player != null && player != this)
+        {
+            Destroy(player.gameObject);
+        }
+        else
+        {
+            player = this;
+        }
+    }
+
     void Start()
     {
         journal.SetActive(false);

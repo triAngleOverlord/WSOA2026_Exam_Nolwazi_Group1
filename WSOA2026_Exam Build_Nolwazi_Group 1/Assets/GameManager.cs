@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public List<string> congoSequence = new List<string>(); 
 
     public string[] congoFamilyTreeSequence;
-    void Awake()
+    public void Awake()
     {
         if (Instance != null && Instance != this)
         {

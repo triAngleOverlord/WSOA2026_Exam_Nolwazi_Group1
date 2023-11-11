@@ -2770,7 +2770,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 247
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6314,9 +6314,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314130617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.4, y: -10.5, z: 0}
-  m_LocalScale: {x: 1.7167, y: 2.2184, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 28.39, y: -12.88, z: 0}
+  m_LocalScale: {x: 0.45999998, y: 0.5944335, z: 0.26795596}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1757413188}
   - {fileID: 2085768796}
@@ -6339,7 +6339,7 @@ MonoBehaviour:
   pCameraPOS: {fileID: 1757413187}
   openJournal: 0
   journal: {fileID: 1363459502}
-  speed: 3
+  speed: 5
 --- !u!50 &1314130622
 Rigidbody2D:
   serializedVersion: 4
@@ -8628,7 +8628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c006c1dda820f8047ae49aa062bd7860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Congo
+  sceneName: Maze
   player: {fileID: 0}
 --- !u!1 &1710132514
 GameObject:
