@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour
         nigeriaPuzzle.gameObject.SetActive(false);
         collectedPanel.gameObject.SetActive(false);
 
-        congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
+        congoSequence.Add("A2"); congoSequence.Add("Grandma"); congoSequence.Add("Brother"); congoSequence.Add("Elder"); congoSequence.Add("Brother's Friend"); 
+        congoSequence.Add("Husband"); congoSequence.Add("Widow"); congoSequence.Add("Sister1"); congoSequence.Add("Brother's Friend's Child"); 
+        congoSequence.Add("Child1"); congoSequence.Add("Child3"); congoSequence.Add("Child4"); congoSequence.Add("Child5");
     }
 
 
