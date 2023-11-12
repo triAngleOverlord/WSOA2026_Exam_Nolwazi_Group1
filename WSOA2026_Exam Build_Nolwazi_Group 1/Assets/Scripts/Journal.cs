@@ -55,9 +55,9 @@ public class Journal : MonoBehaviour
         }
     }
 
-    public void egyptTab()
+    public void pageTab(int pageNumber)
     {   pages[currentPage].gameObject.SetActive(false);
-        currentPage = 2;
+        currentPage = pageNumber;
         pages[currentPage].gameObject.SetActive(true);
         
     }

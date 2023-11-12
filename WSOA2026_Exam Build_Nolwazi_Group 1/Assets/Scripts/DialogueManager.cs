@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueBTN;
 
     private const string SPEAKER_TAG = "speaker";
-    private const string PORTRAIT_TAG = "portrait";
+    private const string PORTRAIT_TAG = "potrait";
     private const string GIVE_TAG = "give";
 
 
@@ -99,7 +99,8 @@ public class DialogueManager : MonoBehaviour
                 oneDialogue.transform.parent.gameObject.SetActive(false);
                 twoDialogue.transform.parent.gameObject.SetActive(false);
                 givingImage.gameObject.SetActive(false);
-                
+                narrativeText.transform.parent.gameObject.SetActive(false);
+
                 //Debug.Log(currentDialogue.name);
                 for (int i = 0; i < choices.Length; i++) 
                 {
