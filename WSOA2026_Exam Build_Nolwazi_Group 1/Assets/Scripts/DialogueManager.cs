@@ -1,15 +1,19 @@
 using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using System.Xml.Serialization;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+    [Header("Globals Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
+    [Header("Current NPC")]
+    public GameObject NPC;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
@@ -32,6 +36,8 @@ public class DialogueManager : MonoBehaviour
     private bool dialogueIsPlaying;
     private Coroutine displayLineCoroutine;
     private bool canContinueToNextLine= true;
+    private Animator currentAnim;
+    private DialogueVariables dialogueVariables;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -41,6 +47,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
     private const string PORTRAIT_TAG = "potrait";
     private const string GIVE_TAG = "give";
+    private const string ACTION_TAG = "action";
 
 
     private void Awake()
@@ -55,6 +62,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
     }
 
     private void Start()
@@ -85,6 +93,8 @@ public class DialogueManager : MonoBehaviour
         //currentStory.variablesState["choiceOne"] = false;
         dialogueIsPlaying=true;
         dialoguePanel.SetActive(true);
+
+        dialogueVariables.StartListening(currentStory);
         GameManager.Instance.pauseEnemyMovement();
         continueStory();
     }
@@ -109,7 +119,7 @@ public class DialogueManager : MonoBehaviour
                 continueBTN.SetActive(false);
                 //displayChoices();
                 string placeHolder = currentStory.Continue();
-                //Debug.Log(currentStory.currentTags.Count);
+                Debug.Log(placeHolder);
                 if(currentStory.currentTags.Count !=0)
                     handleTags(currentStory.currentTags, placeHolder);
                 else
@@ -139,18 +149,18 @@ public class DialogueManager : MonoBehaviour
         foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
-            Debug.Log(tag);
+            //Debug.Log(tag);
             if(splitTag.Length != 2)
             {
                 Debug.LogError("Tag is incorrect: " + tag);
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
-            string tempValue = tagValue.Substring(0, 1);
-            //Debug.Log(tempValue);
+            
             switch(tagKey)
             {
                 case SPEAKER_TAG: //Debug.Log("speaker= " + tagValue);
+                    string tempValue = tagValue.Substring(0, 1);
                     if (tempValue == "1")
                     {
                         oneDialogue.transform.parent.gameObject.SetActive(true);
@@ -161,6 +171,8 @@ public class DialogueManager : MonoBehaviour
                         }
                         displayLineCoroutine = StartCoroutine(displayLine(oneDialogue, tempText));
                         oneName.text = tagValue.Substring(1,tagValue.Length-1);
+                        currentAnim = oneAnimator;
+                        oneSprite.gameObject.SetActive(true);
                     }
                     else
                     {
@@ -172,19 +184,16 @@ public class DialogueManager : MonoBehaviour
                         }
                         displayLineCoroutine = StartCoroutine(displayLine(twoDialogue, tempText));
                         twoName.text = tagValue.Substring(1, tagValue.Length-1); 
+                        currentAnim = twoAnimator;
+                        twoSprite.gameObject.SetActive(true);
                     }
                     break;
                 case PORTRAIT_TAG:
-                    oneSprite.gameObject.SetActive(true);
-                    twoSprite.gameObject.SetActive(true);
-                    if (tempValue == "1")
-                    {
-                        oneAnimator.Play(tagValue);
-                    }
-                    else
-                    {
-                        twoAnimator.Play(tagValue);
-                    }
+                    //oneSprite.gameObject.SetActive(true);
+                    //twoSprite.gameObject.SetActive(true);
+                    
+                        currentAnim.Play(tagValue);
+                   
                     break;
                 case GIVE_TAG:
                     givingImage.gameObject.SetActive(true);
@@ -193,13 +202,17 @@ public class DialogueManager : MonoBehaviour
                     AddToJournal pCopy = player.AddComponent<AddToJournal>();
                     pCopy.materialName = tagValue + "_J";
                     break;
+
+                case ACTION_TAG:NPC.transform.GetComponent<afterAction>().actionToDo();
+                    break;
             }
             
         }
     }
 
-    private void exitDialogueMode()
+    public void exitDialogueMode()
     {
+        dialogueVariables.StopListening(currentStory);
         GameManager.Instance.resumeEnemyMovement();
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -258,7 +271,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
         canContinueToNextLine = true;
-        Debug.Log(canContinueToNextLine);
+        //Debug.Log(canContinueToNextLine);
         displayChoices();
     }
     private IEnumerator SelectFirstChoice()

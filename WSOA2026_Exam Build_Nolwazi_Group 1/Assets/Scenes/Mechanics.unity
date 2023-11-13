@@ -9035,7 +9035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
+  m_Color: {r: 1, g: 0.7176692, b: 0.47547168, a: 0.6156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12594,6 +12594,10 @@ PrefabInstance:
       propertyPath: choices.Array.data[2]
       value: 
       objectReference: {fileID: 5188227230358799757}
+    - target: {fileID: 8909920622371828964, guid: da1f79cd61a3f91438949e034815a555, type: 3}
+      propertyPath: globalsInkFile.inkAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 39695f2191d4cb64a9c7389b667c1737, type: 3}
     - target: {fileID: 8909920622371828965, guid: da1f79cd61a3f91438949e034815a555, type: 3}
       propertyPath: m_RootOrder
       value: 0
