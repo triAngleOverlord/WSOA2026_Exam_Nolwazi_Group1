@@ -9,7 +9,7 @@ public class NPCInteraction : MonoBehaviour
     private bool yesI;
     private void Start()
     {
-        Debug.Log(name);
+        //Debug.Log(name);
         EtoInteract = GameManager.Instance.interactCue.gameObject;
         WorldScreen = GameObject.Find("WorldScreen").transform;
     }
@@ -18,7 +18,7 @@ public class NPCInteraction : MonoBehaviour
     {
         if (yesI == true && Input.GetKey(KeyCode.E))
         {
-            Debug.Log("I interacted with " + name);
+            //Debug.Log("I interacted with " + name);
             NPCinteraction();
             yesI = false;
             PlayerScript.canMove = false;
@@ -29,8 +29,8 @@ public class NPCInteraction : MonoBehaviour
     {
         if (other != null && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Found " + name);
-            instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
+            //Debug.Log("Found " + name);
+            instanText = Instantiate(EtoInteract, new Vector3(transform.parent.position.x, transform.parent.position.y+0.4f, transform.parent.position.z), Quaternion.identity, WorldScreen);
             yesI = true;
         }
     }
@@ -41,8 +41,9 @@ public class NPCInteraction : MonoBehaviour
     }
     private void NPCinteraction()
     {
-        Debug.Log("Player made a npcInteraction");
+        //Debug.Log("Player made a npcInteraction");
         DialogueManager.instance.enterDialogueMode(inkJSON);
+        DialogueManager.instance.NPC = gameObject;
     }
 
 }

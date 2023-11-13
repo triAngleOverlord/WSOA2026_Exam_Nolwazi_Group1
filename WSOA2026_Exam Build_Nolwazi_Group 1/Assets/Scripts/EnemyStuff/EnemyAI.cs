@@ -9,16 +9,25 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
     public float enemySpeed;
     public bool playerSpotted;
-
-    public Transform[] patrolPoints;
+    [SerializeField] private GameObject patrolRoute;
+    public List<Transform> patrolPoints= new List<Transform>();
     public int targetPoint;
-    public Transform patrolTarget;
+    private Transform patrolTarget;
     public Transform eTarget;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        Transform[] points = patrolRoute.GetComponentsInChildren<Transform>();
+
+        foreach (Transform p in points)
+        {
+            if (p.CompareTag("PatrolTarget"))
+                patrolTarget = p;
+            else if (p.CompareTag("PatrolPoint"))
+                patrolPoints.Add(p);
+        }
         agent = GetComponent<NavMeshAgent>();
         agent.speed = enemySpeed;
         agent.updateRotation = false;
@@ -29,6 +38,9 @@ public class EnemyAI : MonoBehaviour
         eTarget = patrolPoints[targetPoint];
 
         StartCoroutine(hasEnemyMoved(transform.position));
+
+        
+
     }
 
     // Update is called once per frame
@@ -44,7 +56,7 @@ public class EnemyAI : MonoBehaviour
     public void patroling()
     {
         targetPoint++;
-        if (targetPoint >= patrolPoints.Length)
+        if (targetPoint >= patrolPoints.Count)
             targetPoint = 0;
 
         eTarget = patrolPoints[targetPoint];

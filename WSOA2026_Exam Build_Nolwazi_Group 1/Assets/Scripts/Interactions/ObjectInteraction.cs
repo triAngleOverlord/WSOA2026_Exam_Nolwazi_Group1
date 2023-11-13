@@ -1,4 +1,7 @@
+using TMPro;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectInteraction : MonoBehaviour
 {
@@ -6,10 +9,15 @@ public class ObjectInteraction : MonoBehaviour
     private Transform WorldScreen;
     private GameObject instanText;
     private bool objectI;
+    [SerializeField] private string objectName;
+    public bool important;
+
+    public GameObject collectedPanel;
     private void Start()
     {
         WorldScreen = GameObject.Find("WorldScreen").transform;
         EtoInteract = GameManager.Instance.interactCue.gameObject;
+        collectedPanel = GameManager.Instance.collectedPanel.gameObject;
     }
 
     // Update is called once per frame
@@ -26,6 +34,12 @@ public class ObjectInteraction : MonoBehaviour
             objectI = false;
             PlayerScript.canMove = false;
             Destroy(instanText);
+
+            collectedPanel.SetActive(true);
+            GameObject.Find("ObjectImage").transform.GetComponent<Image>().sprite = Resources.Load<Sprite>("GivenObjects/" + name);
+            GameObject.Find("collectedTXT").transform.GetComponent<TextMeshProUGUI>().text = new string("You found a " + objectName + "! Be sure to check your journal");
+            if (important==false) 
+                Destroy(gameObject);
         }
     }
 
@@ -33,8 +47,8 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other != null && other.gameObject.CompareTag("Player"))
         {
-            //Debug.Log("Found");
-            instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
+            Debug.Log("Found");
+            instanText = Instantiate(EtoInteract, transform.position, Quaternion.identity, WorldScreen);
             objectI = true;
         }
     }

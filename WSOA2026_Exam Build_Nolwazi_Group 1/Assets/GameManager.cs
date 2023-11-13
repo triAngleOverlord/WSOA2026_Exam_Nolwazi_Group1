@@ -11,12 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject interactCue;
     [SerializeField] public GameObject congoPuzzle;
     [SerializeField] public GameObject nigeriaPuzzle;
-    [SerializeField] public GameObject collectItemPanel;
+    [SerializeField] public GameObject collectedPanel;
 
     public List<string> congoSequence = new List<string>(); 
 
     public string[] congoFamilyTreeSequence;
-    void Awake()
+    public void Awake()
     {
         if (Instance != null && Instance != this)
         {
@@ -34,8 +34,11 @@ public class GameManager : MonoBehaviour
         interactCue = Resources.Load<GameObject>("PressToInteract");
         congoPuzzle.gameObject.SetActive(false);
         nigeriaPuzzle.gameObject.SetActive(false);
+        collectedPanel.gameObject.SetActive(false);
 
-        congoSequence.Add("Mask"); congoSequence.Add("Mask (1)");
+        congoSequence.Add("A2"); congoSequence.Add("Grandma"); congoSequence.Add("Brother"); congoSequence.Add("Elder"); congoSequence.Add("Brother's Friend"); 
+        congoSequence.Add("Husband"); congoSequence.Add("Widow"); congoSequence.Add("Sister1"); congoSequence.Add("Brother's Friend's Child"); 
+        congoSequence.Add("Child1"); congoSequence.Add("Child3"); congoSequence.Add("Child4"); congoSequence.Add("Child5");
     }
 
 
