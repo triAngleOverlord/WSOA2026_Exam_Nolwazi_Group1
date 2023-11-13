@@ -296,15 +296,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f46cf03688bc844b94380e3df2d552, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpeed: 2
+  enemySpeed: 1
   playerSpotted: 0
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  patrolRoute: {fileID: 0}
+  patrolPoints: []
   targetPoint: 0
-  patrolTarget: {fileID: 0}
   eTarget: {fileID: 0}
 --- !u!195 &4454224687503695490
 NavMeshAgent:

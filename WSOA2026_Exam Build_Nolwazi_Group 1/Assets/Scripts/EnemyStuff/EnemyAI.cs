@@ -25,7 +25,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (p.CompareTag("PatrolTarget"))
                 patrolTarget = p;
-            else
+            else if (p.CompareTag("PatrolPoint"))
                 patrolPoints.Add(p);
         }
         agent = GetComponent<NavMeshAgent>();

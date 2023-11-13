@@ -30,7 +30,7 @@ public class NPCInteraction : MonoBehaviour
         if (other != null && other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Found " + name);
-            instanText = Instantiate(EtoInteract, transform.parent.position, Quaternion.identity, WorldScreen);
+            instanText = Instantiate(EtoInteract, new Vector3(transform.parent.position.x, transform.parent.position.y+0.4f, transform.parent.position.z), Quaternion.identity, WorldScreen);
             yesI = true;
         }
     }

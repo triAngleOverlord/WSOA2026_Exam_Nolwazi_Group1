@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - MaskSlot
   - PatrolTarget
+  - PatrolPoint
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 3159078637
+    locked: 0
   - name: Background
     uniqueID: 2847319875
     locked: 0
