@@ -154,11 +154,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2145390974}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: -137}
+  m_AnchoredPosition: {x: -6, y: -174}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187800917
@@ -181,10 +181,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nolwazi: Where are we off too next Wybie?\n\n Wybie: Scans show proof
+  m_text: 'Nolwazi: Where are we off to next?
+
+
+    Smart Watch: Scans show proof
     of life in a nearby village, somewhere within a place once known as the Democratic
-    Republic of Congo\n\nNolwazi: Oh,Grandma mentioned that place once or twice.
-    Thy're big on community"
+    Republic of Congo
+
+
+    Nolwazi: Oh,Grandma mentioned that place once or twice.
+    They''re big on community'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -420,7 +426,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bdce8a35a7aa81948a30e429f3e0912c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e0531a3224909c845b82b36c9027279d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -473,8 +479,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.817398, y: -0.0000019073}
-  m_SizeDelta: {x: 907.63, y: 389.2}
+  m_AnchoredPosition: {x: 2.3994, y: -3.1677}
+  m_SizeDelta: {x: 885.2, y: 486.7646}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1000531565
 MonoBehaviour:
@@ -572,9 +578,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nolwazi: This village is beautiful!\n\nWybie: I did a scan of the place,
-    many people here share the same DNA \n\nNolwazi: It's a village made of a family,
-    wow. Shall we look for the eldest memBER. We can get information from them "
+  m_text: "Nolwazi: This village is beautiful\n\nSmart Watch: I did a scan of the
+    place, many people here share the same DNA \n\nNolwazi: It's a village made of
+    a family, wow. Shall we look for the eldest member. We can get information from
+    them "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -601,8 +608,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.4
-  m_fontSizeBase: 15.4
+  m_fontSize: 17.68
+  m_fontSizeBase: 17.68
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -751,7 +758,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2145390974}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1153,14 +1160,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 187800916}
   - {fileID: 1673523691}
+  - {fileID: 187800916}
   m_Father: {fileID: 2084608907}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -10, y: 64}
+  m_AnchoredPosition: {x: -18, y: 86}
   m_SizeDelta: {x: 372.0954, y: 243.6058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145390975
@@ -1183,7 +1190,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb99fa66cc6ca8e4392d169afc250e96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29c132cffc2757d4fba309effd036e57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
