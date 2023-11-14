@@ -40,7 +40,7 @@ public class MaskPanel : MonoBehaviour, IDropHandler
         {
             if (slot.transform.GetComponent<MaskPanel>().occupying == null)
             {
-                Debug.Log("There is nothing in a maskSlot");
+                //Debug.Log("There is nothing in a maskSlot");
                 return;
             }
             else

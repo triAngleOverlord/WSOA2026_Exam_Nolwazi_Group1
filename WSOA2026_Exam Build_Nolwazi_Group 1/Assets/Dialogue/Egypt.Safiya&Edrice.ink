@@ -10,7 +10,7 @@ This papyrus is the only clue I have. I wonder if you can help me.#speaker:1Nolw
 
 
 That papyrus... how on earth did you get it? It’s linked to our family tree. #speaker:2Safiya #potrait:happySafiya
-Come with me.#speaker:2Safiya #potrait:happySafiya
+Come with me to the house with two large potted cacti.#speaker:2Safiya #potrait:happySafiya
 ~narrativePoint=1
 #action:o
 ->END

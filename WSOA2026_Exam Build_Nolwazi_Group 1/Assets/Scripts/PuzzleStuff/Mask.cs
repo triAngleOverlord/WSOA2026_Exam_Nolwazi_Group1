@@ -37,7 +37,7 @@ public class Mask : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
     {
         if (transform.parent != canvas.transform)
         {
-            Debug.Log(transform.parent.name + " is the new parent");
+            //Debug.Log(transform.parent.name + " is the new parent");
             maskCanvasGp.blocksRaycasts = true;
 
         }
