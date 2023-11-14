@@ -47,5 +47,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending Scenes/TanzaniaEnding.unity
     guid: c3af3729582430c439d2c4e125ea0ba7
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: ac0dc695d380a1647951fe065c5b8af2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 2c7fb5e359889d04295b106931ee4a4a, type: 2}

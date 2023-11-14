@@ -3,15 +3,15 @@ INCLUDE globals.ink
 ===one===
 Nolwazi: Hey what do you think you're doing! It's not good to steal #speaker:1Nolwazi #portrait:angryNolwazi
 
-Lekon: I'm sorry, I'm just hungry. #speaker:2Lekon #potrait sadLekon
+Lekon: I'm sorry, I'm just hungry. #speaker:2Lekon #potrait: sadLekon
 
 Nolwazi: Oh my, Where do you live? Where is your mother? #speaker:1Nolwazi #portrait:sadNolwazi 
 
-Lekon: I live there under that stalI. I don’t know my mother; I don’t have one.#speaker:2Lekon #potrait sadLekon
+Lekon: I live there under that stalI. I don’t know my mother; I don’t have one.#speaker:2Lekon #potrait: sadLekon
 
 Nolwazi: I’m so sorry. Is there no one else you know here? Are you all alone?#speaker:1Nolwazi #portrait:sadNolwazi 
 
-Lekon: *Nods* #speaker:2Lekon #potrait sadLekon
+Lekon: *Nods* #speaker:2Lekon #potrait: sadLekon
 
 
 
@@ -24,7 +24,7 @@ Lekon: *Nods* #speaker:2Lekon #potrait sadLekon
 == Give ==
 Nolwazi: Okay, I'm going to give you some coins. You have to promise to use them wisely okay. #speaker:1Nolwazi #potrait: neutralNolwazi
 
-Lekon: *Nods* Thank you Madame.#speaker:2Lekon #potrait sadLekon
+Lekon: *Nods* Thank you Madame.#speaker:2Lekon #potrait: sadLekon
 
 -> Boy_Continue
 == Boy_Continue ==
@@ -45,7 +45,7 @@ Lekon: Yes, follow me, I can show you.
 == Take ==
 Nolwazi: Okay, you're going to come with me. There must be someone in this market place that might be able to take you. Do you know where it is?#speaker:1Nolwazi #potrait: neutralNolwazi
 
-Lekon: Yes I do. You can follow me.#speaker:2Lekon #potrait sadLekon
+Lekon: Yes I do. You can follow me.#speaker:2Lekon #potrait: sadLekon
 
 Nolwazi: Great #speaker:1Nolwazi #potrait: neutralNolwazi
 

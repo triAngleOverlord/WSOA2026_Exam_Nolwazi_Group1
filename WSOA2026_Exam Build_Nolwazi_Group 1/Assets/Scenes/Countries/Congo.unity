@@ -1189,11 +1189,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3719552387116456376, guid: 76ecf9b47dad41b4ca8d0e80e13f1796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.65
+      value: -65.3
       objectReference: {fileID: 0}
     - target: {fileID: 3719552387116456376, guid: 76ecf9b47dad41b4ca8d0e80e13f1796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.94
+      value: -31.48
       objectReference: {fileID: 0}
     - target: {fileID: 3719552387116456376, guid: 76ecf9b47dad41b4ca8d0e80e13f1796, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2905,7 +2905,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3706,6 +3706,10 @@ PrefabInstance:
     - target: {fileID: 5708214373998039682, guid: 7c9ec35c783641846af958897db86a5b, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5708214373998039683, guid: 7c9ec35c783641846af958897db86a5b, type: 3}
+      propertyPath: objectName
+      value: 'Wedding Picture of Kitoko, Lisanga and Boboto '
       objectReference: {fileID: 0}
     - target: {fileID: 5708214373998039686, guid: 7c9ec35c783641846af958897db86a5b, type: 3}
       propertyPath: m_Name

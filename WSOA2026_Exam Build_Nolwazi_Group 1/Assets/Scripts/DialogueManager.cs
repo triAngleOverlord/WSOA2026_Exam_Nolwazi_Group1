@@ -5,13 +5,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    [Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;
+    [Header("Load Globals Ink File")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
     [Header("Current NPC")]
     public GameObject NPC;
 
@@ -63,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     private void Start()
