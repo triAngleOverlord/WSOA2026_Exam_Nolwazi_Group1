@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Animator animator;
     public static PlayerScript player;
 
     public GameObject playerCamera;
@@ -55,6 +56,8 @@ public class PlayerScript : MonoBehaviour
 
     }
 
+
+
     private void FixedUpdate()
     {
         if (canMove == true)
@@ -62,6 +65,7 @@ public class PlayerScript : MonoBehaviour
             if (Input.GetKey(KeyCode.D))
             {
                 transform.Translate(Vector2.right * Time.deltaTime * speed);
+                
             }
             if (Input.GetKey(KeyCode.A))
             {

@@ -1,0 +1,915 @@
+fileFormatVersion: 2
+guid: acd07fab5e8503b43b5cb307681cc2dd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a421d21e72188e045bdac0b9bd025c13
+      internalID: 2121876063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1307375a0f756849b3ca78cb6002fd5
+      internalID: 933363107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bcd50cbe2cb5f41b37bedea981b74c
+      internalID: -1531922161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 198
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c2cf071cf3fb845a795eda8a75f95c
+      internalID: -805451447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73eeafc7894840e4995f0d4ea9f78ac6
+      internalID: 1761566540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b31744c3e90a3b459155e8270d95b62
+      internalID: -769732921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be17891031b0c7649931284f48889341
+      internalID: -1518725163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 198
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df5d037535dd5468ad8b5120087430
+      internalID: 2133456694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 198
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03372fe307e6ff41a3cc86dd6c6613c
+      internalID: -1953432246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfb1240ac375a34890b710534ae3248
+      internalID: -1344411157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 134
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712118cf61f496f458109a8cdf3c3c20
+      internalID: 1522111505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 134
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5810db13be880e444a094c84fb51774f
+      internalID: -1065104655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d243db4256b01a43a1415307cc251a1
+      internalID: 214542836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b256b09104aa4bf488eceff4b9214e83
+      internalID: -1987705548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 134
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123abfd182f3f0a4c957ed797af426fc
+      internalID: 1828038302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3e48c3b724de3a4dab783ecb25538dd
+      internalID: 1490263844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f44f09e8c9da640be2f19e918e560c
+      internalID: 1593546537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 134
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977a9877d12b90242a75eecbd24336c6
+      internalID: 886039967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03a53b1838312144db5810ce0911f3a7
+      internalID: -2095145998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e5adee9cebcb042b1aca45b4472166
+      internalID: 1633606934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8f7a4b7947e814b8fc0f698a21b667
+      internalID: 641202609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 70
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fccc89626d25da45aa7de4957c25d18
+      internalID: 436801119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d8631c79d47c84bbedb74bf35f7f08
+      internalID: -1786864037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ca4fdf0dbb65142bc75cdfae7c25d0
+      internalID: 560519209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09346ba239f3d5c4eb7dbf80e7f14cd4
+      internalID: 855055355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 70
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cfb7cd840167c41892484cc68549b6
+      internalID: 1117567698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 70
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b6d3b6639a8204a981944b298e20cd
+      internalID: 997514441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c63748881a5e5045b0e45117620669b
+      internalID: 2132538342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 6
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ee23b91d73f934db573449107fed3b
+      internalID: 235780130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 6
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7a72ccd483dec46ad4c4c05b76ab33
+      internalID: 1004916681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8cd2472eaa7294eb729e7670f065b8
+      internalID: 454699839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de5aadc76ce6bb44acd2cee73333ece
+      internalID: -334945964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 6
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc65d48e39b4ffe4890ce723de512949
+      internalID: -682687415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af802c7b9b13fc74ea9e3ba2f1af28fa
+      internalID: -2079473230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1077e4a14556445a6e59db17514704
+      internalID: 1016662579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NolwaziSpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 6
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf73fe745bf0cc47baf43e0a1b5ebe4
+      internalID: -472337320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      NolwaziSpritesheet_0: 2121876063
+      NolwaziSpritesheet_1: 933363107
+      NolwaziSpritesheet_10: 1522111505
+      NolwaziSpritesheet_11: -1065104655
+      NolwaziSpritesheet_12: 214542836
+      NolwaziSpritesheet_13: -1987705548
+      NolwaziSpritesheet_14: 1828038302
+      NolwaziSpritesheet_15: 1490263844
+      NolwaziSpritesheet_16: 1593546537
+      NolwaziSpritesheet_17: 886039967
+      NolwaziSpritesheet_18: -2095145998
+      NolwaziSpritesheet_19: 1633606934
+      NolwaziSpritesheet_2: -1531922161
+      NolwaziSpritesheet_20: 641202609
+      NolwaziSpritesheet_21: 436801119
+      NolwaziSpritesheet_22: -1786864037
+      NolwaziSpritesheet_23: 560519209
+      NolwaziSpritesheet_24: 855055355
+      NolwaziSpritesheet_25: 1117567698
+      NolwaziSpritesheet_26: 997514441
+      NolwaziSpritesheet_27: 2132538342
+      NolwaziSpritesheet_28: 235780130
+      NolwaziSpritesheet_29: 1004916681
+      NolwaziSpritesheet_3: -805451447
+      NolwaziSpritesheet_30: 454699839
+      NolwaziSpritesheet_31: -334945964
+      NolwaziSpritesheet_32: -682687415
+      NolwaziSpritesheet_33: -2079473230
+      NolwaziSpritesheet_34: 1016662579
+      NolwaziSpritesheet_35: -472337320
+      NolwaziSpritesheet_4: 1761566540
+      NolwaziSpritesheet_5: -769732921
+      NolwaziSpritesheet_6: -1518725163
+      NolwaziSpritesheet_7: 2133456694
+      NolwaziSpritesheet_8: -1953432246
+      NolwaziSpritesheet_9: -1344411157
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
