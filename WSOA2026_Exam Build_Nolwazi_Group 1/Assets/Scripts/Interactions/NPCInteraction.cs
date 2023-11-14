@@ -42,8 +42,9 @@ public class NPCInteraction : MonoBehaviour
     private void NPCinteraction()
     {
         //Debug.Log("Player made a npcInteraction");
-        DialogueManager.instance.enterDialogueMode(inkJSON);
         DialogueManager.instance.NPC = gameObject;
+        DialogueManager.instance.enterDialogueMode(inkJSON);
+       
     }
 
 }

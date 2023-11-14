@@ -1,5 +1,4 @@
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,8 +46,8 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other != null && other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Found");
-            instanText = Instantiate(EtoInteract, transform.position, Quaternion.identity, WorldScreen);
+            //Debug.Log("Found");
+            instanText = Instantiate(EtoInteract, new Vector3(transform.position.x, transform.position.y + 0.4f, transform.position.z), Quaternion.identity, WorldScreen);
             objectI = true;
         }
     }

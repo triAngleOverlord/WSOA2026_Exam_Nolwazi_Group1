@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,6 +6,7 @@ public class MaskPanel : MonoBehaviour, IDropHandler
 {
     public Transform familyTree;
     public GameObject occupying;
+    [SerializeField] private TextAsset inkJSON;
 
     public void Awake()
     {
@@ -40,7 +40,7 @@ public class MaskPanel : MonoBehaviour, IDropHandler
         {
             if (slot.transform.GetComponent<MaskPanel>().occupying == null)
             {
-                Debug.Log("There is nothing in a maskSlot");
+                //Debug.Log("There is nothing in a maskSlot");
                 return;
             }
             else
@@ -49,6 +49,6 @@ public class MaskPanel : MonoBehaviour, IDropHandler
             }
             
         }
-        GameManager.Instance.checkCongoSequence(masksSubmitted);
+        GameManager.Instance.checkCongoSequence(masksSubmitted, inkJSON);
     }
 }

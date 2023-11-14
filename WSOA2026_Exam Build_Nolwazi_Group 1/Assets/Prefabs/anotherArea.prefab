@@ -146,5 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c006c1dda820f8047ae49aa062bd7860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Maze
-  player: {fileID: 0}
+  sceneName: Egypt

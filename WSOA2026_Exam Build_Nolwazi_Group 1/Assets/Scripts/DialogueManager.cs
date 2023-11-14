@@ -45,7 +45,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject continueBTN;
 
     private const string SPEAKER_TAG = "speaker";
-    private const string PORTRAIT_TAG = "potrait";
+    private const string POTRAIT_TAG = "potrait";
+    private const string PORTRAIT_TAG = "portrait";
     private const string GIVE_TAG = "give";
     private const string ACTION_TAG = "action";
 
@@ -119,7 +120,7 @@ public class DialogueManager : MonoBehaviour
                 continueBTN.SetActive(false);
                 //displayChoices();
                 string placeHolder = currentStory.Continue();
-                Debug.Log(placeHolder);
+                //Debug.Log(placeHolder);
                 if(currentStory.currentTags.Count !=0)
                     handleTags(currentStory.currentTags, placeHolder);
                 else
@@ -195,6 +196,7 @@ public class DialogueManager : MonoBehaviour
                         currentAnim.Play(tagValue);
                    
                     break;
+                case POTRAIT_TAG: currentAnim.Play(tagValue); break;
                 case GIVE_TAG:
                     givingImage.gameObject.SetActive(true);
                     givingImage.transform.GetComponent<Image>().sprite= Resources.Load<Sprite>("GivenObjects/" + tagValue);
