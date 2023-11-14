@@ -17,7 +17,7 @@ public class puzzleInteraction : MonoBehaviour
     {
         if (type == puzzleType.worldPuzzle)
             worldpuzzlePanel.SetActive(false);
-        Debug.Log(transform.parent.name);
+        //Debug.Log(transform.parent.name);
         WorldScreen = GameObject.Find("WorldScreen").transform;
         EtoInteract = GameManager.Instance.interactCue.gameObject;
     }

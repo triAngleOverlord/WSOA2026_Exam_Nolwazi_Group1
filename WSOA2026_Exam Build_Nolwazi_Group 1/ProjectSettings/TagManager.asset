@@ -6,8 +6,10 @@ TagManager:
   tags:
   - Pages
   - PlayerBody
-  - MaskSlot
   - Enemy
+  - MaskSlot
+  - PatrolTarget
+  - PatrolPoint
   layers:
   - Default
   - TransparentFX
@@ -15,8 +17,8 @@ TagManager:
   - 
   - Water
   - UI
-  - FamilyTree
-  - 
+  - MiniMap
+  - PlayerBody
   - 
   - 
   - 
@@ -42,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 3159078637
+    locked: 0
   - name: Background
     uniqueID: 2847319875
     locked: 0
@@ -56,4 +61,7 @@ TagManager:
     locked: 0
   - name: PlayerScreen
     uniqueID: 549507739
+    locked: 0
+  - name: Mask
+    uniqueID: 809417991
     locked: 0
