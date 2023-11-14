@@ -2,7 +2,7 @@ INCLUDE globals.ink
 {narrativePoint==5: ->one | ->two}
 ===one===
 INT. SAQQARA TOMBS - DAY
-
+~narrativePoint=0
 Edrice, Femi, and Nolwazi walk together towards the Saqqara Tombs. The ancient structures rise in the distance, a testament to the enduring history of this village. #speaker:1Edrice #portrait:happyEdrice
 
 (smiling) Nolwazi, you've helped mend a long-standing wound in our village. We are in your debt and will gladly show you the Saqqara tombs. #speaker:1Edrice #portrait:happyEdrice
@@ -30,8 +30,10 @@ Your grandfather he was a dear friend of my Ahmed, and the necklace is the key t
 My grandfather? Who, wait the Pharoah? You knew him? He was a Pharoah? Oh, my goodness, Grandma never told me any of this at all!#speaker:1Nolwazi #portrait: neutralNolwazi
 
 Their love was a secret affair, perhaps she did not know how. But now you do know?#speaker:2Femi #portrait: happyFemi
-Do well with the knowledge you have received from here today. With Knowledge comes great power and with power comes great responsibility. #speaker:2Femi #portrait: happyFemi #action: door
-~narrativePoint=0
+Do well with the knowledge you have received from here today. With Knowledge comes great power and with power comes great responsibility. #speaker:2Femi #portrait: happyFemi 
+
+#action: door
+
 ->DONE
 ===two===
 Farwell Nolwazi.#speaker:2Femi #portrait: happyFemi

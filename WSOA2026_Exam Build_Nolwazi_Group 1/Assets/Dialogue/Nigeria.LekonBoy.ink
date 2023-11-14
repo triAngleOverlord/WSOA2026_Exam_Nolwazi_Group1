@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-{narrativePoint==2: ->one | ->DONE}
+{narrativePoint==2: ->one | ->two}
 ===one===
 Nolwazi: Hey what do you think you're doing! It's not good to steal #speaker:1Nolwazi #portrait:angryNolwazi
 
@@ -51,3 +51,7 @@ Nolwazi: Great #speaker:1Nolwazi #potrait: neutralNolwazi
 
 ~narrativePoint=3
 -> DONE
+
+===two===
+A young Boy
+->DONE

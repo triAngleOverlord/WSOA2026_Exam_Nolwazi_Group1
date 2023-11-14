@@ -25,7 +25,7 @@ The puzzle is that green block.
 ->DONE
 
 ===three===
-
+~narrativePoint=0 
 Nolwazi: Okay, I have helped you. Now will you tell me the story behind this fruit basket? It belonged to my grandmother; here is a picture. I do not know who the other woman in the photo is. #speaker:1Nolwazi #portrait:neutralNolwazi
 
 Bisola: It looks very familiar. Tayo, didn’t Emmanuel have a picture like this too? #speaker:2Bisola #portrait:worriedBisola
@@ -34,6 +34,8 @@ Tayo: *Looks at the picture* Yes, that woman, that's nya ila (great-grandmother)
 
 Nolwazi: You think we’re similar? Thank you, and thank you for the fruits; hopefully, we see each other again sometime Tayo and Bisola. #speaker:2Nolwazi #portrait:happyNolwazi
 
-Bisola: We hope to see you again too Nolwazi, we hope you have learned something from us. Have a safe journey! #speaker:1Bisola #portrait:worriedBisola #action:door
-~narrativePoint=0
+Bisola: We hope to see you again too Nolwazi, we hope you have learned something from us. Have a safe journey! #speaker:1Bisola #portrait:worriedBisola
+
+#action:door
+
 ->DONE

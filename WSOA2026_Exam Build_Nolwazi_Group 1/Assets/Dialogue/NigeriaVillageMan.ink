@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-{narrativePoint==1: ->one | ->two}
+{narrativePoint==0: ->one | ->two}
 ===one===
 In Nigeria, Abuja, the year XX23
 

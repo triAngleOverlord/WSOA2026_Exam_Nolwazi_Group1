@@ -12,13 +12,13 @@ public class SceneManagement : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1.0f;
+        //Time.timeScale = 1.0f;
     }
 
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     public void QuitGame()

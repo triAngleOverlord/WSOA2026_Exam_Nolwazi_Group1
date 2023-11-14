@@ -41,6 +41,5 @@ Nolwazi accepts the masks, grateful.
 ->DONE
 ===two===
 The widow just stares in silence
-#action: endCongo
 ->DONE
 

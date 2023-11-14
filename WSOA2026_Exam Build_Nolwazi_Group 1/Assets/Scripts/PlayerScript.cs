@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         if (canMove == true)
         {
