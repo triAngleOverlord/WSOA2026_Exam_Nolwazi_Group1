@@ -181,8 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wybie: Where we''re off to seems to be last of the civilazation in this
-    region, also the last group of people we will come across in this continent.
+  m_text: 'Smart watch: Where we''re off to seems to be last of the civilazation
+    in this region, also the last group of people we will come across in this continent.
     In fact I am getting little to no signs of life. Shall we divert the mission
     ma''am?
 
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nolwazi: It's so quiet. Wybie scan?\n\nWybie: Nothing here ma'am. \n\nNolwazi:
-    No, that can't be, I feel...something. There! Under that tree, there's  man. "
+  m_text: "Nolwazi: It's so quiet. scan.\n\nSmart watch: Nothing here ma'am. \n\nNolwazi:
+    No, that can't be, I feel...something. There! Under that tree, there's  man!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cb99fa66cc6ca8e4392d169afc250e96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29c132cffc2757d4fba309effd036e57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
