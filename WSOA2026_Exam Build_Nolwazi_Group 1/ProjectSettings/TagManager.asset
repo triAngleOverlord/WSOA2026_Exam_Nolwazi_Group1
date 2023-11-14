@@ -10,6 +10,7 @@ TagManager:
   - MaskSlot
   - PatrolTarget
   - PatrolPoint
+  - Safiya
   layers:
   - Default
   - TransparentFX

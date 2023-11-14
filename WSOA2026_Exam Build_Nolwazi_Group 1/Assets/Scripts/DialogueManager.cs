@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
                 continueBTN.SetActive(false);
                 //displayChoices();
                 string placeHolder = currentStory.Continue();
-                Debug.Log(placeHolder);
+                //Debug.Log(placeHolder);
                 if(currentStory.currentTags.Count !=0)
                     handleTags(currentStory.currentTags, placeHolder);
                 else

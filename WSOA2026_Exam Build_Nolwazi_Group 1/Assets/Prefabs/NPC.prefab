@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3719552386263013532}
   - component: {fileID: 3719552386263013535}
   - component: {fileID: 3719552386263013533}
+  - component: {fileID: 3931973437720484090}
   m_Layer: 0
   m_Name: InteractRange
   m_TagString: Untagged
@@ -83,7 +84,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba36cdd5c8fe264ca27a5395e2687dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: fd360ddd94d0409439f4883885b1c273, type: 3}
+  inkJSON: {fileID: 4900000, guid: 93b4c8f86e12b3349abc549631a90abf, type: 3}
+--- !u!114 &3931973437720484090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719552386263013536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94985b38d9aa0a478e93c306db8d9a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhichNPC: 0
+  pos: {fileID: 0}
+  SafiyaMove: 0
 --- !u!1 &3719552387116456379
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,9 +128,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3719552387116456379}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.55, y: -2.41, z: 10.160711}
-  m_LocalScale: {x: 0.47, y: 0.6330402, z: 0.18613355}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: -1.167474, y: -0.34946, z: 0}
+  m_LocalScale: {x: 0.42, y: 0.43, z: 0.23794633}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3719552386263013537}
   m_Father: {fileID: 0}
@@ -161,8 +177,8 @@ SpriteRenderer:
   m_SortingLayerID: 1375896271
   m_SortingLayer: 1
   m_SortingOrder: 14
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.46619305, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1911fd4fd8926b045b174960158e83f0, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -206,18 +222,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0063954294, y: -0.38493913}
+  m_Offset: {x: 0.0026952624, y: -0.8751301}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.8, y: 2.4}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.68022364, y: 0.14895785}
+  m_Size: {x: 0.7711208, y: 0.51206195}
   m_EdgeRadius: 0
 --- !u!114 &3719552387116456377
 MonoBehaviour:
