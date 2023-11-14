@@ -1,5 +1,4 @@
 INCLUDE globals.ink
-~narrativePoint=4
 {narrativePoint==2: ->one| {narrativePoint==4:->next| ->two}}
 
 ===two===

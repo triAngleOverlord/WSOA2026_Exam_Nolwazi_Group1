@@ -1,5 +1,6 @@
 INCLUDE globals.ink
-{narrativePoint==4: ->one | ->two}
+~narrativePoint=4
+{narrativePoint==4:->two |  ->one}
 ===one===
 EXT. VILLAGE - WIDOW'S HOME - DAY
 
@@ -35,9 +36,11 @@ That wall was important to my Grandmother. I intend to honour her by helping reb
 
 Alright Nolwazi,You have the heart for this and I admire that. Take this mask above the bedframe, alongside mine. It belonged to my husband. And I recognize the one you have, seen only once in my youth. I will accompany you to the festival. #speaker2:Kitoko #portrait:smilingKitoko
 
-Nolwazi accepts the masks, grateful. #action: endCongo
+Nolwazi accepts the masks, grateful. 
+#action: endCongo
 ->DONE
 ===two===
 The widow just stares in silence
+#action: endCongo
 ->DONE
 

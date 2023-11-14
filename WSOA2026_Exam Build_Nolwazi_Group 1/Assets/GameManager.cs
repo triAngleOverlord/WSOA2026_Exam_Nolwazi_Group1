@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void checkCongoSequence(List<string> maskSubmitted)
+    public void checkCongoSequence(List<string> maskSubmitted, TextAsset inkJSON)
     {
         if (congoSequence.Count != 0)
         {
@@ -69,6 +69,10 @@ public class GameManager : MonoBehaviour
             }
             
             Debug.Log("You are correct!");
+
+            DialogueManager.instance.NPC = gameObject;
+            DialogueManager.instance.enterDialogueMode(inkJSON);
+            congoPuzzle.SetActive(false);
         }
     }
 
