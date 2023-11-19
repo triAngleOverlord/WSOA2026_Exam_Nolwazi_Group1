@@ -15,7 +15,7 @@ Bisola: Ah, Thank God. Madame, please, I would love to help you and thank you, b
 
 Nolwazi: Perhaps I can help. What happened? #speaker:2Nolwazi #portrait:neutralNolwazi
 
-Tayo: You see our brother, Emmanuel is sick, so he left us in charge of his market stall, but Bisola and I messed up the orders and prices, now nobody can receive or buy their portions for the day, and we will lose money. Emmanuel will not be happy. #speaker:1Tayo #portraitstressedTayo
+Tayo: You see our brother, Emmanuel is sick, so he left us in charge of his market stall, but Bisola and I messed up the orders and prices, now nobody can receive or buy their portions for the day, and we will lose money. Emmanuel will not be happy. #speaker:1Tayo #portrait:stressedTayo
 
 Bisola: Can you help? We need to figure out the prices of these fruits and vegetables. If you win, we will answer your questions and give you some fruits for free.  #speaker:2Bisola #portrait:worriedBisola
 ~narrativePoint=4

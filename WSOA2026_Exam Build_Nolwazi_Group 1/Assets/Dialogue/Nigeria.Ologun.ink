@@ -27,6 +27,6 @@ Nolwazi:One more thing I'll need. Do you perhaps know of an orphange nearby, thi
 
 Ologun: Oh anything for the beautiful lady. Oya boy, come! #speaker:1Ologun #potrait:flirtyOlogun
 
-Lekon: Thank you Madame. #speaker:1Lekon potrait: sadLekon
+Lekon: Thank you Madame. #speaker:1Lekon #potrait: sadLekon
 
 

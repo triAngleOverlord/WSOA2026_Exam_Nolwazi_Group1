@@ -51,6 +51,7 @@ Nolwazi Lands in Tanzania unsure of if she is in the right place after being cap
 
 
 	Indeed, Nolwazi. These stones, they are linked to the past and the future. To understand our culture and your quest, you must explore this village, find the missing beads, and assemble them to complete the Maasai necklace. Once you have done this, return to this tree, where my Zawadi lies. There, you shall learn the profound symbolism of our Maasai beads and the stories they carry. Your journey is one of connection and preservation, much like the beads themselves, a weaving together of our past and your future.#speaker:2Kibwana #portrait:seriousKibwana
+	#action:door
 	
 	->END
 

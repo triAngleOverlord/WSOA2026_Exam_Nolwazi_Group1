@@ -1461,6 +1461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneBoundaries Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5090551066227074877, guid: 33bb451d85d698c4a9bfa907024c4be0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33bb451d85d698c4a9bfa907024c4be0, type: 3}
 --- !u!1 &1618223332
@@ -1705,7 +1709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1985228677242159215, guid: 14a11b59355afec46a5b8f3fb6e621f9, type: 3}
       propertyPath: sceneName
-      value: Egypt
+      value: Tanzania
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14a11b59355afec46a5b8f3fb6e621f9, type: 3}
@@ -2484,6 +2488,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5188227229341353978}
     - target: {fileID: 8909920622371828964, guid: da1f79cd61a3f91438949e034815a555, type: 3}
+      propertyPath: typingSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909920622371828964, guid: da1f79cd61a3f91438949e034815a555, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 5188227229390161134}
@@ -2578,11 +2586,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9031341365950379437, guid: 4a485d4336c8c4843aa4df3a8fa1a922, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 9031341365950379437, guid: 4a485d4336c8c4843aa4df3a8fa1a922, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.74
+      value: -5.79
       objectReference: {fileID: 0}
     - target: {fileID: 9031341365950379437, guid: 4a485d4336c8c4843aa4df3a8fa1a922, type: 3}
       propertyPath: m_LocalPosition.z

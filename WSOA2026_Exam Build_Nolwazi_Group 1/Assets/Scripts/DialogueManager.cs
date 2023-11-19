@@ -174,7 +174,7 @@ public class DialogueManager : MonoBehaviour
                         currentAnim = oneAnimator;
                         oneSprite.gameObject.SetActive(true);
                     }
-                    else
+                    else if (tempValue == "2")
                     {
                         twoDialogue.transform.parent.gameObject.SetActive(true);
                         //npcDialogue.text = tempText;
@@ -186,6 +186,19 @@ public class DialogueManager : MonoBehaviour
                         twoName.text = tagValue.Substring(1, tagValue.Length-1); 
                         currentAnim = twoAnimator;
                         twoSprite.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        oneDialogue.transform.parent.gameObject.SetActive(true);
+                        //nolwaziDialogue.text = tempText;
+                        if (displayLineCoroutine != null)
+                        {
+                            StopCoroutine(displayLineCoroutine);
+                        }
+                        displayLineCoroutine = StartCoroutine(displayLine(oneDialogue, tempText));
+                        oneName.text = tagValue.Substring(1, tagValue.Length - 1);
+                        currentAnim = oneAnimator;
+                        oneSprite.gameObject.SetActive(true);
                     }
                     break;
                 case PORTRAIT_TAG:
